@@ -34,7 +34,7 @@ class TodoBackendApplicationTests {
 
     @Test
     void accountEmailTest() {
-        Account newAccount = new Account("", "testemail@email.com", "");
+        Account newAccount = new Account("", "", "testemail@email.com");
         assertEquals(newAccount.getEmail(), "testemail@email.com");
     }
 

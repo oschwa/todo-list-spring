@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import dev.oliver.todobackend.domain.Account;
+import dev.oliver.todobackend.entity.TodoAccount;
 
 @SpringBootTest
 class TodoBackendApplicationTests {
@@ -16,25 +16,25 @@ class TodoBackendApplicationTests {
 
     @Test
     void accountInstanceTest() {
-        Account newAccount = new Account();
-        assertEquals(newAccount.getClass(), Account.class);
+        TodoAccount newAccount = new TodoAccount("", "", "");
+        assertEquals(newAccount.getClass(), TodoAccount.class);
     }
 
     @Test
     void accountUserNameTest() {
-        Account newAccount = new Account("testname", "");
+        TodoAccount newAccount = new TodoAccount("testname", "");
         assertEquals(newAccount.getUserName(), "testname");
     }
 
     @Test
     void accountPasswordTest() {
-        Account newAccount = new Account("", "testpassword");
+        TodoAccount newAccount = new TodoAccount("", "testpassword");
         assertEquals(newAccount.getPassword(), "testpassword");
     }
 
     @Test
     void accountEmailTest() {
-        Account newAccount = new Account("", "", "testemail@email.com");
+        TodoAccount newAccount = new TodoAccount("", "", "testemail@email.com");
         assertEquals(newAccount.getEmail(), "testemail@email.com");
     }
 

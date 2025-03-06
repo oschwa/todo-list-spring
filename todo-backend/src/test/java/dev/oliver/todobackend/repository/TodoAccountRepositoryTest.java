@@ -1,11 +1,10 @@
 package dev.oliver.todobackend.repository;
-
 import dev.oliver.todobackend.entity.TodoAccount;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,12 +26,12 @@ class TodoAccountRepositoryTest {
 
         todoAccountRepository.save(newAccount);
 
-        TodoAccount returnAccount = todoAccountRepository.findById(1).get();
+        Optional<TodoAccount> returnAccount = todoAccountRepository.findById(newAccount.getId());
         assertNotNull(returnAccount);
     }
 
     @Test
-    public void todoAccountRepositoryReturnsMultiple() {
+    public void todoAccountRepositoryReturnsAll() {
         TodoAccount firstAccount = new TodoAccount("username",
                 "password", "email@website.com");
         TodoAccount secondAccount = new TodoAccount("username",

@@ -1,5 +1,5 @@
 package dev.oliver.todobackend.repository;
-import dev.oliver.todobackend.entity.TodoAccount;
+import dev.oliver.todobackend.entity.TodoUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -12,35 +12,35 @@ import static org.junit.jupiter.api.Assertions.*;
 class TodoAccountRepositoryTest {
 
     @Autowired
-    private TodoAccountRepository todoAccountRepository;
+    private TodoUserRepository todoAccountRepository;
 
     @Test
-    public void todoAccountRepositoryContextLoadsTest() {
+    public void todoUserRepositoryContextLoadsTest() {
         assertNotNull(todoAccountRepository);
     }
 
     @Test
-    public void todoAccountRepositoryReturnsById() {
-        TodoAccount newAccount = new TodoAccount("username",
+    public void todoUserRepositoryReturnsById() {
+        TodoUser newAccount = new TodoUser("username",
                 "password", "email@website.com");
 
         todoAccountRepository.save(newAccount);
 
-        Optional<TodoAccount> returnAccount = todoAccountRepository.findById(newAccount.getId());
+        Optional<TodoUser> returnAccount = todoAccountRepository.findById(newAccount.getId());
         assertNotNull(returnAccount);
     }
 
     @Test
-    public void todoAccountRepositoryReturnsAll() {
-        TodoAccount firstAccount = new TodoAccount("username",
+    public void todoUserRepositoryReturnsAll() {
+        TodoUser firstAccount = new TodoUser("username",
                 "password", "email@website.com");
-        TodoAccount secondAccount = new TodoAccount("username",
+        TodoUser secondAccount = new TodoUser("username",
                 "password", "email@website.com");
 
         todoAccountRepository.save(firstAccount);
         todoAccountRepository.save(secondAccount);
 
-        List<TodoAccount> accountList = todoAccountRepository.findAll();
+        List<TodoUser> accountList = todoAccountRepository.findAll();
         assertNotNull(accountList);
         assertTrue(accountList.size() > 1);
     }

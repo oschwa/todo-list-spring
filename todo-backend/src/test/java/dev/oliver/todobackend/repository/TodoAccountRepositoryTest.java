@@ -21,21 +21,18 @@ class TodoAccountRepositoryTest {
 
     @Test
     public void todoUserRepositoryReturnsById() {
-        TodoUser newAccount = new TodoUser("username",
-                "password", "email@website.com");
+        TodoUser newUser = new TodoUser();
 
-        todoAccountRepository.save(newAccount);
+        todoAccountRepository.save(newUser);
 
-        Optional<TodoUser> returnAccount = todoAccountRepository.findById(newAccount.getId());
+        Optional<TodoUser> returnAccount = todoAccountRepository.findById(newUser.getId());
         assertNotNull(returnAccount);
     }
 
     @Test
     public void todoUserRepositoryReturnsAll() {
-        TodoUser firstAccount = new TodoUser("username",
-                "password", "email@website.com");
-        TodoUser secondAccount = new TodoUser("username",
-                "password", "email@website.com");
+        TodoUser firstAccount = new TodoUser();
+        TodoUser secondAccount = new TodoUser();
 
         todoAccountRepository.save(firstAccount);
         todoAccountRepository.save(secondAccount);

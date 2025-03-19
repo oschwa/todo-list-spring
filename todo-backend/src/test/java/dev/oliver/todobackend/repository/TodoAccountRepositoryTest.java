@@ -1,30 +1,44 @@
 package dev.oliver.todobackend.repository;
-
-import dev.oliver.todobackend.entity.TodoAccount;
+import dev.oliver.todobackend.entity.TodoUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import java.util.List;
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 class TodoAccountRepositoryTest {
 
     @Autowired
-    private TodoAccountRepository todoAccountRepository;
+    private TodoUserRepository todoAccountRepository;
 
     @Test
-    public void todoAccountRepositoryContextLoadsTest() {
+    public void todoUserRepositoryContextLoadsTest() {
         assertNotNull(todoAccountRepository);
     }
 
     @Test
-    public void todoAccountRepositoryReturnsById() {
-        TodoAccount newAccount = new TodoAccount("username",
-                "password", "email@website.com");
+    public void todoUserRepositoryReturnsById() {
+        TodoUser newUser = new TodoUser();
 
-        todoAccountRepository.save(newAccount);
+        todoAccountRepository.save(newUser);
 
-        TodoAccount returnAccount = todoAccountRepository.findById(1).get();
+        Optional<TodoUser> returnAccount = todoAccountRepository.findById(newUser.getId());
         assertNotNull(returnAccount);
+    }
+
+    @Test
+    public void todoUserRepositoryReturnsAll() {
+        TodoUser firstAccount = new TodoUser();
+        TodoUser secondAccount = new TodoUser();
+
+        todoAccountRepository.save(firstAccount);
+        todoAccountRepository.save(secondAccount);
+
+        List<TodoUser> accountList = todoAccountRepository.findAll();
+        assertNotNull(accountList);
+        assertTrue(accountList.size() > 1);
     }
 }

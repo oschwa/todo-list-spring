@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c22de9d3-73f1-446d-9ae6-d92c7ea06387" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo-backend/src/main/java/dev/oliver/todobackend/service/TodoUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo-backend/src/main/java/dev/oliver/todobackend/service/impl/TodoUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo-backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo-backend/src/test/java/dev/oliver/todobackend/service/TodoUserServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-backend/src/main/java/dev/oliver/todobackend/entity/TodoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/src/main/java/dev/oliver/todobackend/entity/TodoUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-backend/target/classes/dev/oliver/todobackend/entity/TodoUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/target/classes/dev/oliver/todobackend/entity/TodoUser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +71,7 @@
     "JUnit.TodoBackendApplicationTests.accountInstanceTest.executor": "Run",
     "JUnit.TodoBackendApplicationTests.contextLoads.executor": "Run",
     "JUnit.TodoBackendApplicationTests.executor": "Run",
+    "JUnit.TodoUserServiceTests.contextLoadsRepository.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -86,7 +94,20 @@
       <recent name="dev.oliver.todobackend.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoAccountRepositoryTest">
+  <component name="RunManager" selected="JUnit.TodoUserServiceTests.contextLoadsRepository">
+    <configuration name="TodoBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.oliver.todobackend.TodoBackendApplication" />
+      <module name="todo-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.oliver.todobackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoAccountRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-backend" />
       <extension name="coverage">
@@ -98,38 +119,6 @@
       <option name="PACKAGE_NAME" value="dev.oliver.todobackend.repository" />
       <option name="MAIN_CLASS_NAME" value="dev.oliver.todobackend.repository.TodoAccountRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoAccountRepositoryTest.todoAccountRepositoryContextLoadsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.oliver.todobackend.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.oliver.todobackend.repository" />
-      <option name="MAIN_CLASS_NAME" value="dev.oliver.todobackend.repository.TodoAccountRepositoryTest" />
-      <option name="METHOD_NAME" value="todoAccountRepositoryContextLoadsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoAccountRepositoryTest.todoAccountRepositoryReturnsAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.oliver.todobackend.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.oliver.todobackend.repository" />
-      <option name="MAIN_CLASS_NAME" value="dev.oliver.todobackend.repository.TodoAccountRepositoryTest" />
-      <option name="METHOD_NAME" value="todoAccountRepositoryReturnsAll" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,13 +155,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoUserServiceTests.contextLoadsRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.oliver.todobackend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.oliver.todobackend.service" />
+      <option name="MAIN_CLASS_NAME" value="dev.oliver.todobackend.service.TodoUserServiceTests" />
+      <option name="METHOD_NAME" value="contextLoadsRepository" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoUserServiceTests.contextLoadsRepository" />
+        <item itemvalue="JUnit.TodoAccountRepositoryTest" />
+        <item itemvalue="Application.TodoBackendApplication" />
         <item itemvalue="JUnit.TodoAccountRepositoryTest.todoUserRepositoryContextLoadsTest" />
         <item itemvalue="JUnit.TodoAccountRepositoryTest.todoAccountRepositoryReturnsById" />
-        <item itemvalue="JUnit.TodoAccountRepositoryTest.todoAccountRepositoryReturnsAll" />
-        <item itemvalue="JUnit.TodoAccountRepositoryTest.todoAccountRepositoryContextLoadsTest" />
-        <item itemvalue="JUnit.TodoAccountRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
